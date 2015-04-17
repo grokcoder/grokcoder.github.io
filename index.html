@@ -1,3 +1,982 @@
+Last login: Thu Apr 16 21:06:35 on ttys000
+wangxiaoyideMacBook-Pro:etc wangxiaoyi$ ls
+afpovertcp.cfg                        localtime                             postfix
+aliases                               locate.rc                             ppp
+aliases.db                            mach_init.d                           profile
+apache2                               mach_init_per_login_session.d         protocols
+asl                                   mach_init_per_user.d                  racoon
+asl.conf                              mail.rc                               rc.common
+auto_home                             man.conf                              rc.imaging
+auto_master                           manpaths                              rc.netboot
+autofs.conf                           manpaths.d                            resolv.conf
+bashrc                                master.passwd                         rmtab
+com.apple.screensharing.agent.launchd moduli                                rpc
+csh.cshrc                             nanorc                                rtadvd.conf
+csh.login                             networks                              security
+csh.logout                            newsyslog.conf                        services
+cups                                  newsyslog.d                           shells
+defaults                              nfs.conf                              snmp
+dnsextd.conf                          notify.conf                           ssh_config
+efax.rc                               ntp-restrict.conf                     ssh_host_dsa_key
+emond.d                               ntp.conf                              ssh_host_dsa_key.pub
+find.codes                            ntp_opendirectory.conf                ssh_host_key
+fstab.hd                              openldap                              ssh_host_key.pub
+ftpd.conf                             pam.d                                 ssh_host_rsa_key
+ftpd.conf.default                     passwd                                ssh_host_rsa_key.pub
+ftpusers                              paths                                 sshd_config
+gettytab                              paths.d                               sudoers
+group                                 periodic                              syslog.conf
+hosts                                 pf.anchors                            ttys
+hosts.equiv                           pf.conf                               xtab
+irbrc                                 pf.os                                 zshenv
+kern_loader.conf                      php-fpm.conf.default
+krb5.keytab                           php.ini.default
+wangxiaoyideMacBook-Pro:etc wangxiaoyi$ cd ~
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ ls
+Desktop   Documents Downloads Library   Movies    Music     Pictures  Public    codes     data      ~
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ gem install bundler
+ERROR:  Could not find a valid gem 'bundler' (>= 0), here is why:
+          Unable to download data from https://rubygems.org/ - Errno::ETIMEDOUT: Operation timed out - connect(2) (https://rubygems.org/latest_specs.4.8.gz)
+gem install bundler
+^CERROR:  Interrupted
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ brew install gem
+Error: No available formula for gem 
+Searching formulae...
+brew-gem	     cmigemo		  rbenv-communal-gems  rbenv-gem-rehash
+chgems		     imagemagick	  rbenv-default-gems   rbenv-gemset
+Searching taps...
+^C
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ gem --help
+RubyGems is a sophisticated package manager for Ruby.  This is a
+basic help message containing pointers to more information.
+
+  Usage:
+    gem -h/--help
+    gem -v/--version
+    gem command [arguments...] [options...]
+
+  Examples:
+    gem install rake
+    gem list --local
+    gem build package.gemspec
+    gem help install
+
+  Further help:
+    gem help commands            list all 'gem' commands
+    gem help examples            show some examples of usage
+    gem help platforms           show information about platforms
+    gem help <COMMAND>           show help on COMMAND
+                                   (e.g. 'gem help install')
+    gem server                   present a web page at
+                                 http://localhost:8808/
+                                 with info about installed gems
+  Further information:
+    http://guides.rubygems.org
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ gem -v
+2.0.14
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ gem install jekyll
+gem install jekyll^CERROR:  Interrupted
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ gem install jekyll
+ERROR:  Could not find a valid gem 'jekyll' (>= 0), here is why:
+          Unable to download data from https://rubygems.org/ - Errno::ETIMEDOUT: Operation timed out - connect(2) (https://rubygems.org/latest_specs.4.8.gz)
+^CERROR:  Interrupted
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ clear
+
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ 
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ 
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ 
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ 
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ 
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ 
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ 
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ 
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ 
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ 
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ 
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ 
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ gem install jekyll
+ERROR:  Could not find a valid gem 'jekyll' (>= 0), here is why:
+          Unable to download data from https://rubygems.org/ - Errno::ETIMEDOUT: Operation timed out - connect(2) (https://rubygems.org/latest_specs.4.8.gz)
+^CERROR:  Interrupted
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ gem sources
+*** CURRENT SOURCES ***
+
+https://rubygems.org/
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ gem sources --remove http://rubygems.org/
+source http://rubygems.org/ not present in cache
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ gem sources --remove http://rubygems.org/
+source http://rubygems.org/ not present in cache
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ gem sources --a http://ruby.taobao.org/
+http://ruby.taobao.org/ added to sources
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ gem sources -l
+*** CURRENT SOURCES ***
+
+https://rubygems.org/
+http://ruby.taobao.org/
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ gem sources --remove https://rubygems.org/
+https://rubygems.org/ removed from sources
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ gem sources -l
+*** CURRENT SOURCES ***
+
+http://ruby.taobao.org/
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ gem install jekyll
+^CERROR:  Interrupted
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ source 'https://ruby.taobao.org/'
+-bash: https://ruby.taobao.org/: No such file or directory
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ sudo gem update --system
+Password:
+Updating rubygems-update
+Fetching: rubygems-update-2.4.6.gem (100%)
+Successfully installed rubygems-update-2.4.6
+Parsing documentation for rubygems-update-2.4.6
+Installing ri documentation for rubygems-update-2.4.6
+Installing darkfish documentation for rubygems-update-2.4.6
+Installing RubyGems 2.4.6
+RubyGems 2.4.6 installed
+Parsing documentation for rubygems-2.4.6
+Installing ri documentation for rubygems-2.4.6
+
+=== 2.4.6 / 2014-02-05
+
+Bug fixes:
+
+* Fixed resolving gems with both upper and lower requirement boundaries.
+  Issue #1141 by Jakub Jirutka.
+* Moved extension directory after require_paths to fix missing constant bugs
+  in some gems with C extensions.  Issue #784 by André Arko, pull request
+  #1137 by Barry Allard.
+* Use Gem::Dependency#requirement when adding a dependency to an existing
+  dependency instance.  Pull request #1101 by Josh Cheek.
+* Fixed warning of shadowed local variable in Gem::Specification.  Pull request
+  #1109 by Rohit Arondekar
+* Gem::Requirement should always sort requirements before coercion to Hash.
+  Pull request #1139 by Eito Katagiri.
+* The `gem open` command should change the current working directory before
+  opening the editor.  Pull request #1142 by Alex Wood.
+* Ensure quotes are stripped from the Windows launcher script used to install
+  gems.  Pull request #1115 by Youngjun Song.
+* Fixed errors when writing to NFS to to 0444 files.  Issue #1161 by Emmanuel
+  Hadoux.
+* Removed dead code in Gem::StreamUI.  Pull request #1117 by mediaslave24.
+* Fixed typos.  Pull request #1096 by hakeda.
+* Relaxed CMake dependency for RHEL 6 and CentOS 6.  Pull request #1124 by Vít
+  Ondruch.
+* Relaxed Psych dependency.  Pull request #1128 by Vít Ondruch.
+
+=== 2.4.5 / 2014-12-03
+
+Bug fixes:
+
+* Improved speed of requiring gems.  (Around 25% for a 60 gem test).  Pull
+  request #1060 by unak.
+* RubyGems no longer attempts to look up gems remotely with the --local flag.
+  Pull request #1084 by Jeremy Evans.
+* Executable stubs use the correct gem version when RUBYGEMS_GEMDEPS is
+  active.  Issue #1072 by Michael Kaiser-Nyman.
+* Fixed handling of pinned gems in lockfiles with versions.  Issue #1078 by
+  Ian Ker-Seymer.
+* Fixed handling of git@example:gem.git URIs.  Issue #1054 by Mogutan Mogu.
+* Fixed handling of platforms retrieved from the dependencies API.  Issue
+  #1058 and patch suggestion by tux-mind.
+* RubyGems now suggests a copy-pasteable `gem pristine` command when
+  extensions are missing.  Pull request #1057 by Shannon Skipper.
+* Improved errors for long file names when packaging.  Pull request #1016 by
+  Piotrek Bator.
+* `gem pristine` now skips gems cannot be found remotely.  Pull request #1064
+  by Tuomas Kareinen.
+* `gem pristine` now caches gems to the proper directory.  Pull request #1064
+  by Tuomas Kareinen.
+* `gem pristine` now skips bundled gems properly.  Pull request #1064 by
+  Tuomas Kareinen.
+* Improved interoperability of Vagrant with RubyGems.  Pull request #1057 by
+  Vít Ondruch.
+* Renamed CONTRIBUTING to CONTRIBUTING.rdoc to allow markup.  Pull request
+  #1090 by Roberto Miranda.
+* Switched from #partition to #reject as only one collection is used.  Pull
+  request #1074 by Tuomas Kareinen.
+* Fixed installation of gems on systems using memory-mapped files.  Pull
+  request #1038 by Justin Li.
+* Fixed bug in Gem::Text#min3 where `a == b < c`.  Pull request #1026 by
+  fortissimo1997.
+* Fixed uninitialized variable warning in BasicSpecification.  Pull request
+  #1019 by Piotr Szotkowski.
+* Removed unneeded exception handling for cyclic dependencies.  Pull request
+  #1043 by Jens Wille.
+* Fixed grouped expression warning.  Pull request #1081 by André Arko.
+* Fixed handling of platforms when writing lockfiles.
+
+=== 2.4.4 / 2014-11-12
+
+Bug fixes:
+
+* Add alternate Root CA for upcoming certificate change. Fixes #1050 by
+  Protosac
+
+=== 2.4.3 / 2014-11-10
+
+Bug fixes:
+
+* Fix redefine MirrorCommand issue. Pull request #1044 by @akr.
+* Fix typo in platform= docs.  Pull request #1048 by @jasonrclark
+* Add root SSL certificates for upcoming certificate change.  Fixes #1050 by
+  Protosac
+
+=== 2.4.2 / 2014-10-01
+
+This release was sponsored by Ruby Central.
+
+Bug fixes:
+
+* RubyGems now correctly matches wildcard no_proxy hosts.  Issue #997 by
+  voelzemo.
+* Added support for missing git_source method in the gem dependencies API.
+* Fixed handling of git gems with an alternate install directory.
+* Lockfiles will no longer be truncated upon resolution errors.
+* Fixed messaging for `gem owner -a`.  Issue #1004 by Aaron Patterson, Ryan
+  Davis.
+* Removed meaningless ensure.  Pull request #1003 by gogotanaka.
+* Improved wording of --source option help.  Pull request #989 by Jason Clark.
+* Empty build_info files are now ignored.  Issue #903 by Adan Alvarado.
+* Gem::Installer ignores dependency checks when installing development
+  dependencies.  Issue #994 by Jens Willie.
+* `gem update` now continues after dependency errors.  Issue #993 by aaronchi.
+* RubyGems no longer warns about semantic version dependencies for the 0.x
+  range.  Issue #987 by Jeff Felchner, pull request #1006 by Hsing-Hui Hsu.
+* Added minimal lock to allow multithread installation of gems.  Issue #982
+  and pull request #1005 by Yorick Peterse
+* RubyGems now considers prerelease dependencies as it did in earlier versions
+  when --prerelease is given.  Issue #990 by Jeremy Tryba.
+* Updated capitalization in README.  Issue #1010 by Ben Bodenmiller.
+* Fixed activating gems from a Gemfile for default gems.  Issue #991 by khoan.
+* Fixed windows stub script generation for Cygwin.  Issue #1000 by Brett
+  DiFrischia.
+* Allow gem bindir and ruby.exe to live in separate diretories.  Pull request
+  #942 by Ian Flynn.
+* Fixed handling of gemspec in gem dependencies files to match Bundler
+  behavior.  Issue #1020 by Michal Papis.
+* Fixed `gem update` when updating to prereleases.  Issue #1028 by Santiago
+  Pastorino.
+* RubyGems now fails immediately when a git reference cannot be found instead
+  of spewing git errors.  Issue #1031 by Michal Papis
+
+=== 2.4.1 / 2014-07-17
+
+Bug fixes:
+
+* RubyGems can now be updated on Ruby implementations that do not support
+  vendordir in RbConfig::CONFIG.  Issue #974 by net1957.
+
+=== 2.4.0 / 2014-07-16
+
+Minor enhancements:
+
+* The contents command now supports a --show-install-dir option that shows
+  only the directory the gem is installed in.  Feature request #966 by Akinori
+  MUSHA.
+* Added a --build-root option to the install command for packagers.  Pull
+  request #965 by Marcus Rückert.
+* Added vendor gem support to RubyGems.  Package managers may now install gems
+  in Gem.vendor_dir with the --vendor option to gem install.  Issue #943 by
+  Marcus Rückert.
+
+Bug fixes:
+
+* Kernel#gem now respects the prerelease flag when activating gems.
+  Previously this behavior was undefined which could lead to bugs when a
+  prerelease version was unintentionally activated.  Bug #938 by Joe Ferris.
+* RubyGems now prefers gems from git over installed gems.  This allows gems
+  from git to override an installed gem with the same name and version.  Bug
+  #944 by Thomas Kriechbaumer.
+* Fixed handling of git gems in a lockfile with unversioned dependencies.  Bug
+  #940 by Michael Kaiser-Nyman.
+* The ruby directive in a gem dependencies file is ignored when installing.
+  Bug #941 by Michael Kaiser-Nyman.
+* Added open to list of builtin commands (`gem open` now works).  Reported by
+  Espen Antonsen.
+* `gem open` now works with command-line editors.  Pull request #962 by Tim
+  Pope.
+* `gem install -g` now respects `--conservative`.  Pull request #950 by Jeremy
+  Evans.
+* RubyGems releases announcements now now include checksums.  Bug #939 by
+  Alexander E. Fischer.
+* RubyGems now expands ~ in $PATH when checking if installed executables will
+  be runnable.  Pull request #945 by Alex Talker.
+* Fixed `gem install -g --explain`.  Issue #947 by Luis Lavena.  Patch by
+  Hsing-Hui Hsu.
+* RubyGems locks less during gem activation.  Pull request #951 by Aaron
+  Patterson and Justin Searls, #969 by Jeremy Tryba.
+* Kernel#gem is now thread-safe.  Pull request #967 by Aaron Patterson.
+* RubyGems now handles spaces in directory names for some parts of extension
+  building.  Pull request #949 by Tristan Hill.
+* RubyGems no longer defines an empty Date class.  Pull Request #948 by Benoit
+  Daloze.
+* RubyGems respects --document options for `gem update` again.  Bug 946 by
+  jonforums.  Patch by Hsing-Hui Hsu.
+* RubyGems generates documentation again with --ignore-dependencies.  Bug #961
+  by Pulfer.
+* RubyGems can install extensions across partitions now.  Pull request #970 by
+  Michael Scherer.
+* `-s` is now short for `--source` which resolves an ambiguity with
+  --no-suggestions.  Pull request #955 by Alexander Kahn.
+* Added extra test for ~> for 0.0.X versions.  Pull request #958 by Mark
+  Lorenz.
+* Fixed typo in gem updated help.  Pull request #952 by Per Modin.
+* Clarified that the gem description should not be excessively long.  Part of
+  bug #956 by Renier Morales.
+* Hid documentation of outdated test_files related methods in Specification.
+  Guides issue #90 by Emil Soman.
+* RubyGems now falls back to the old index if the rubygems.org API fails
+  during gem resolution.
+
+
+
+------------------------------------------------------------------------------
+
+RubyGems installed the following executables:
+	/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/gem
+
+Ruby Interactive (ri) documentation was installed. ri is kind of like man 
+pages for ruby libraries. You may access it like this:
+  ri Classname
+  ri Classname.class_method
+  ri Classname#instance_method
+If you do not wish to install this documentation in the future, use the
+--no-document flag, or set it as the default in your ~/.gemrc file. See
+'gem help env' for details.
+
+RubyGems system software updated
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ gem install jekyll
+Fetching: liquid-2.6.2.gem (100%)
+ERROR:  While executing gem ... (Gem::FilePermissionError)
+    You don't have write permissions for the /Library/Ruby/Gems/2.0.0 directory.
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ sudo gem install jekyll
+Fetching: liquid-2.6.2.gem (100%)
+Successfully installed liquid-2.6.2
+Fetching: kramdown-1.6.0.gem (100%)
+Successfully installed kramdown-1.6.0
+Fetching: mercenary-0.3.5.gem (100%)
+Successfully installed mercenary-0.3.5
+Fetching: safe_yaml-1.0.4.gem (100%)
+Successfully installed safe_yaml-1.0.4
+Fetching: colorator-0.1.gem (100%)
+Successfully installed colorator-0.1
+Fetching: yajl-ruby-1.2.1.gem (100%)
+Building native extensions.  This could take a while...
+Successfully installed yajl-ruby-1.2.1
+Fetching: posix-spawn-0.3.11.gem (100%)
+Building native extensions.  This could take a while...
+Successfully installed posix-spawn-0.3.11
+Fetching: pygments.rb-0.6.3.gem (100%)
+Successfully installed pygments.rb-0.6.3
+Fetching: redcarpet-3.2.3.gem (100%)
+Building native extensions.  This could take a while...
+Successfully installed redcarpet-3.2.3
+Fetching: blankslate-2.1.2.4.gem (100%)
+Successfully installed blankslate-2.1.2.4
+Fetching: parslet-1.5.0.gem (100%)
+Successfully installed parslet-1.5.0
+Fetching: toml-0.1.2.gem (100%)
+Successfully installed toml-0.1.2
+Fetching: jekyll-paginate-1.1.0.gem (100%)
+Successfully installed jekyll-paginate-1.1.0
+Fetching: jekyll-gist-1.2.1.gem (100%)
+Successfully installed jekyll-gist-1.2.1
+Fetching: coffee-script-source-1.9.1.1.gem (100%)
+Successfully installed coffee-script-source-1.9.1.1
+Fetching: execjs-2.5.2.gem (100%)
+Successfully installed execjs-2.5.2
+Fetching: coffee-script-2.4.1.gem (100%)
+Successfully installed coffee-script-2.4.1
+Fetching: jekyll-coffeescript-1.0.1.gem (100%)
+Successfully installed jekyll-coffeescript-1.0.1
+Fetching: sass-3.4.13.gem (100%)
+Successfully installed sass-3.4.13
+Fetching: jekyll-sass-converter-1.3.0.gem (100%)
+Successfully installed jekyll-sass-converter-1.3.0
+Fetching: hitimes-1.2.2.gem (100%)
+Building native extensions.  This could take a while...
+Successfully installed hitimes-1.2.2
+Fetching: timers-4.0.1.gem (100%)
+Successfully installed timers-4.0.1
+Fetching: celluloid-0.16.0.gem (100%)
+Successfully installed celluloid-0.16.0
+Fetching: rb-fsevent-0.9.4.gem (100%)
+Successfully installed rb-fsevent-0.9.4
+Fetching: ffi-1.9.8.gem (100%)
+Building native extensions.  This could take a while...
+Successfully installed ffi-1.9.8
+Fetching: rb-inotify-0.9.5.gem (100%)
+Successfully installed rb-inotify-0.9.5
+Fetching: listen-2.10.0.gem (100%)
+Successfully installed listen-2.10.0
+Fetching: jekyll-watch-1.2.1.gem (100%)
+Successfully installed jekyll-watch-1.2.1
+Fetching: fast-stemmer-1.0.2.gem (100%)
+Building native extensions.  This could take a while...
+Successfully installed fast-stemmer-1.0.2
+Fetching: classifier-reborn-2.0.3.gem (100%)
+Successfully installed classifier-reborn-2.0.3
+Fetching: jekyll-2.5.3.gem (100%)
+Successfully installed jekyll-2.5.3
+Parsing documentation for liquid-2.6.2
+Installing ri documentation for liquid-2.6.2
+Parsing documentation for kramdown-1.6.0
+Installing ri documentation for kramdown-1.6.0
+Parsing documentation for mercenary-0.3.5
+Installing ri documentation for mercenary-0.3.5
+Parsing documentation for safe_yaml-1.0.4
+Installing ri documentation for safe_yaml-1.0.4
+Parsing documentation for colorator-0.1
+Installing ri documentation for colorator-0.1
+Parsing documentation for yajl-ruby-1.2.1
+unable to convert "\xCA" from ASCII-8BIT to UTF-8 for /Library/Ruby/Gems/2.0.0/extensions/universal-darwin-14/2.0.0/yajl-ruby-1.2.1/yajl/yajl.bundle, skipping
+unable to convert "\xCA" from ASCII-8BIT to UTF-8 for lib/yajl/yajl.bundle, skipping
+Installing ri documentation for yajl-ruby-1.2.1
+Parsing documentation for posix-spawn-0.3.11
+unable to convert "\xCA" from ASCII-8BIT to UTF-8 for /Library/Ruby/Gems/2.0.0/extensions/universal-darwin-14/2.0.0/posix-spawn-0.3.11/posix_spawn_ext.bundle, skipping
+unable to convert "\xCA" from ASCII-8BIT to UTF-8 for lib/posix_spawn_ext.bundle, skipping
+Installing ri documentation for posix-spawn-0.3.11
+Parsing documentation for pygments.rb-0.6.3
+Installing ri documentation for pygments.rb-0.6.3
+Parsing documentation for redcarpet-3.2.3
+unable to convert "\xCA" from ASCII-8BIT to UTF-8 for /Library/Ruby/Gems/2.0.0/extensions/universal-darwin-14/2.0.0/redcarpet-3.2.3/redcarpet.bundle, skipping
+unable to convert "\xCA" from ASCII-8BIT to UTF-8 for lib/redcarpet.bundle, skipping
+Installing ri documentation for redcarpet-3.2.3
+Parsing documentation for blankslate-2.1.2.4
+Installing ri documentation for blankslate-2.1.2.4
+Parsing documentation for parslet-1.5.0
+Installing ri documentation for parslet-1.5.0
+Parsing documentation for toml-0.1.2
+Installing ri documentation for toml-0.1.2
+Parsing documentation for jekyll-paginate-1.1.0
+Installing ri documentation for jekyll-paginate-1.1.0
+Parsing documentation for jekyll-gist-1.2.1
+Installing ri documentation for jekyll-gist-1.2.1
+Parsing documentation for coffee-script-source-1.9.1.1
+Installing ri documentation for coffee-script-source-1.9.1.1
+Parsing documentation for execjs-2.5.2
+Installing ri documentation for execjs-2.5.2
+Parsing documentation for coffee-script-2.4.1
+Installing ri documentation for coffee-script-2.4.1
+Parsing documentation for jekyll-coffeescript-1.0.1
+Installing ri documentation for jekyll-coffeescript-1.0.1
+Parsing documentation for sass-3.4.13
+Installing ri documentation for sass-3.4.13
+Parsing documentation for jekyll-sass-converter-1.3.0
+Installing ri documentation for jekyll-sass-converter-1.3.0
+Parsing documentation for hitimes-1.2.2
+unable to convert "\xCA" from ASCII-8BIT to UTF-8 for /Library/Ruby/Gems/2.0.0/extensions/universal-darwin-14/2.0.0/hitimes-1.2.2/hitimes/2.0/hitimes.bundle, skipping
+unable to convert "\xCA" from ASCII-8BIT to UTF-8 for lib/hitimes/2.0/hitimes.bundle, skipping
+Installing ri documentation for hitimes-1.2.2
+Parsing documentation for timers-4.0.1
+Installing ri documentation for timers-4.0.1
+Parsing documentation for celluloid-0.16.0
+Installing ri documentation for celluloid-0.16.0
+Parsing documentation for rb-fsevent-0.9.4
+Installing ri documentation for rb-fsevent-0.9.4
+Parsing documentation for ffi-1.9.8
+Installing ri documentation for ffi-1.9.8
+Parsing documentation for rb-inotify-0.9.5
+Installing ri documentation for rb-inotify-0.9.5
+Parsing documentation for listen-2.10.0
+Installing ri documentation for listen-2.10.0
+Parsing documentation for jekyll-watch-1.2.1
+Installing ri documentation for jekyll-watch-1.2.1
+Parsing documentation for fast-stemmer-1.0.2
+unable to convert "\xCA" from ASCII-8BIT to UTF-8 for /Library/Ruby/Gems/2.0.0/extensions/universal-darwin-14/2.0.0/fast-stemmer-1.0.2/stemmer.bundle, skipping
+unable to convert "\xCA" from ASCII-8BIT to UTF-8 for lib/stemmer.bundle, skipping
+Installing ri documentation for fast-stemmer-1.0.2
+Parsing documentation for classifier-reborn-2.0.3
+Installing ri documentation for classifier-reborn-2.0.3
+Parsing documentation for jekyll-2.5.3
+Installing ri documentation for jekyll-2.5.3
+31 gems installed
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ ls
+Desktop   Documents Downloads Library   Movies    Music     Pictures  Public    codes     data      ~
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ cd codes/
+wangxiaoyideMacBook-Pro:codes wangxiaoyi$ ls
+crawler             crawler4j           grokcoder.github.io hbase-1.0.0         learningjava        leetcode
+wangxiaoyideMacBook-Pro:codes wangxiaoyi$ gem install bundler
+Fetching: bundler-1.9.4.gem ( 29%)^CERROR:  Interrupted
+wangxiaoyideMacBook-Pro:codes wangxiaoyi$ sudo gem install bundler
+Password:
+Fetching: bundler-1.9.4.gem (100%)
+Successfully installed bundler-1.9.4
+Parsing documentation for bundler-1.9.4
+Installing ri documentation for bundler-1.9.4
+1 gem installed
+wangxiaoyideMacBook-Pro:codes wangxiaoyi$ ls
+crawler             crawler4j           grokcoder.github.io hbase-1.0.0         learningjava        leetcode
+wangxiaoyideMacBook-Pro:codes wangxiaoyi$ cd grokcoder.github.io/
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ ls
+README.md  index.html
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ vi Gemfile
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ ls
+Gemfile    README.md  index.html
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ bundle install
+Your Gemfile has no gem server sources. If you need gems that are not already on your machine, add a line like this to your
+Gemfile:
+source 'https://rubygems.org'
+Could not find gem 'github-pages (>= 0) ruby' in any of the gem sources listed in your Gemfile or installed on this machine.
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ source 'https://rubygems.org'
+-bash: https://rubygems.org: No such file or directory
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ source 'https://ruby.taobao.org/'
+-bash: https://ruby.taobao.org/: No such file or directory
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ ls
+Gemfile    README.md  index.html
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ vi _config.yml
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ ls
+Gemfile     README.md   _config.yml index.html
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ mkdir _layouts
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ ls
+Gemfile     README.md   _config.yml _layouts    index.html
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ cd _
+-bash: cd: _: No such file or directory
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ cd _layouts/
+wangxiaoyideMacBook-Pro:_layouts wangxiaoyi$ ls
+wangxiaoyideMacBook-Pro:_layouts wangxiaoyi$ vi default.html
+wangxiaoyideMacBook-Pro:_layouts wangxiaoyi$ ls
+default.html
+wangxiaoyideMacBook-Pro:_layouts wangxiaoyi$ cd ../
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ ls
+Gemfile     README.md   _config.yml _layouts    index.html
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ rm Gemfile 
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ LS
+README.md   _config.yml _layouts    index.html
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ rm index.html 
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ ls
+README.md   _config.yml _layouts
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ ls
+README.md   _config.yml _layouts
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ mkdir _posts
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ ls
+README.md   _config.yml _layouts    _posts
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ ls
+README.md   _config.yml _layouts    _posts
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ cd _posts/
+wangxiaoyideMacBook-Pro:_posts wangxiaoyi$ ls
+wangxiaoyideMacBook-Pro:_posts wangxiaoyi$ vi 2015-04-16-hello-world.html
+wangxiaoyideMacBook-Pro:_posts wangxiaoyi$ cd ../
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ ls
+README.md   _config.yml _layouts    _posts
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ vi index.html
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ ls
+README.md   _config.yml _layouts    _posts      index.html
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	_config.yml
+	_layouts/
+	_posts/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ git add -A
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ git commit 'test for blog'
+error: pathspec 'test for blog' did not match any file(s) known to git.
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ git commit -m 'test for blog'
+[master 5fafd51] test for blog
+ 4 files changed, 31 insertions(+), 1 deletion(-)
+ create mode 100644 _config.yml
+ create mode 100644 _layouts/default.html
+ create mode 100644 _posts/2015-04-16-hello-world.html
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ git remote -v
+origin	https://github.com/grokcoder/grokcoder.github.io.git (fetch)
+origin	https://github.com/grokcoder/grokcoder.github.io.git (push)
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ git push orgin
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+fatal: 'orgin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ git help config
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ git --config -add name 'grokcoder'
+Unknown option: --config
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ git -config -add name 'grokcoder'
+Unknown option: -config
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ git push orgin
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+fatal: 'orgin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ git remote -v
+origin	https://github.com/grokcoder/grokcoder.github.io.git (fetch)
+origin	https://github.com/grokcoder/grokcoder.github.io.git (push)
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ git push https://github.com/grokcoder/grokcoder.github.io.git
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Counting objects: 8, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 1.03 KiB | 0 bytes/s, done.
+Total 8 (delta 0), reused 0 (delta 0)
+To https://github.com/grokcoder/grokcoder.github.io.git
+   8ab42a1..5fafd51  master -> master
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ ls
+README.md   _config.yml _layouts    _posts      index.html
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ 
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ 
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ vi index.html 
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ ls
+README.md   _config.yml _layouts    _posts      index.html
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ cd _layouts/
+wangxiaoyideMacBook-Pro:_layouts wangxiaoyi$ ls
+default.html
+wangxiaoyideMacBook-Pro:_layouts wangxiaoyi$ vi default.html 
+wangxiaoyideMacBook-Pro:_layouts wangxiaoyi$ ls
+default.html
+wangxiaoyideMacBook-Pro:_layouts wangxiaoyi$ cd ../
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ ls
+README.md   _config.yml _layouts    _posts      index.html
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ cd _posts/
+wangxiaoyideMacBook-Pro:_posts wangxiaoyi$ ls
+2015-04-16-hello-world.html
+wangxiaoyideMacBook-Pro:_posts wangxiaoyi$ vi 2015-04-16-hello-world.html 
+wangxiaoyideMacBook-Pro:_posts wangxiaoyi$ ls
+2015-04-16-hello-world.html
+wangxiaoyideMacBook-Pro:_posts wangxiaoyi$ ls
+2015-04-16-hello-world.html
+wangxiaoyideMacBook-Pro:_posts wangxiaoyi$ cd ../
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ ls
+README.md   _config.yml _layouts    _posts      index.html
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ ls -al
+total 24
+drwxr-xr-x   8 wangxiaoyi  staff  272  4 16 21:57 .
+drwxr-xr-x   9 wangxiaoyi  staff  306  4 16 09:39 ..
+drwxr-xr-x  14 wangxiaoyi  staff  476  4 16 21:51 .git
+-rw-r--r--   1 wangxiaoyi  staff   44  4 16 09:39 README.md
+-rw-r--r--   1 wangxiaoyi  staff   30  4 16 21:47 _config.yml
+drwxr-xr-x   3 wangxiaoyi  staff  102  4 16 21:57 _layouts
+drwxr-xr-x   3 wangxiaoyi  staff  102  4 16 21:57 _posts
+-rw-r--r--   1 wangxiaoyi  staff  325  4 16 21:57 index.html
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ ls
+README.md   _config.yml _layouts    _posts      index.html
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ cd ../
+wangxiaoyideMacBook-Pro:codes wangxiaoyi$ ls
+crawler             crawler4j           grokcoder.github.io hbase-1.0.0         learningjava        leetcode
+wangxiaoyideMacBook-Pro:codes wangxiaoyi$ gem install sass
+Fetching: sass-3.4.13.gem (100%)
+ERROR:  While executing gem ... (Gem::FilePermissionError)
+    You don't have write permissions for the /Library/Ruby/Gems/2.0.0 directory.
+wangxiaoyideMacBook-Pro:codes wangxiaoyi$ sudo gem install sass
+Password:
+Successfully installed sass-3.4.13
+Parsing documentation for sass-3.4.13
+1 gem installed
+wangxiaoyideMacBook-Pro:codes wangxiaoyi$ git clone https://github.com/yulijia/freshman21.git
+Cloning into 'freshman21'...
+remote: Counting objects: 713, done.
+remote: Total 713 (delta 0), reused 0 (delta 0), pack-reused 713
+Receiving objects: 100% (713/713), 221.32 KiB | 16.00 KiB/s, done.
+Resolving deltas: 100% (440/440), done.
+Checking connectivity... done.
+wangxiaoyideMacBook-Pro:codes wangxiaoyi$ ls
+crawler             freshman21          hbase-1.0.0         leetcode
+crawler4j           grokcoder.github.io learningjava
+wangxiaoyideMacBook-Pro:codes wangxiaoyi$ cd grokcoder.github.io/
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ ls
+README.md   _config.yml _layouts    _posts      index.html
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ rm index.html 
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ ls
+README.md   _config.yml _layouts    _posts
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ rm _config.yml 
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ ls
+README.md _layouts  _posts
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ rm -r _layouts
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ ls
+README.md _posts
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ rm -r _posts/
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ rm -r _posts
+rm: _posts: No such file or directory
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ ls
+README.md
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ cd ../
+wangxiaoyideMacBook-Pro:codes wangxiaoyi$ ls
+crawler             freshman21          hbase-1.0.0         leetcode
+crawler4j           grokcoder.github.io learningjava
+wangxiaoyideMacBook-Pro:codes wangxiaoyi$ cp -r freshman21/* grokcoder.github.io/
+wangxiaoyideMacBook-Pro:codes wangxiaoyi$ ls
+crawler             freshman21          hbase-1.0.0         leetcode
+crawler4j           grokcoder.github.io learningjava
+wangxiaoyideMacBook-Pro:codes wangxiaoyi$ cd grokcoder.github.io/
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ ls
+LICENSE         _includes       _sass           c_archives.md   e_tags.md       images
+README.md       _layouts        a_home.md       css             f_guestbook.md  index.html
+_config.yml     _posts          b_about.md      d_categories.md feed.xml
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ git -status
+Unknown option: -status
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   README.md
+	modified:   _config.yml
+	modified:   _layouts/default.html
+	deleted:    _posts/2015-04-16-hello-world.html
+	modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	LICENSE
+	_includes/
+	_layouts/page.html
+	_layouts/post.html
+	_posts/2013-10-10-milu.md
+	_posts/2014-12-13-simple-post.md
+	_posts/2014-12-18-how-to-install.md
+	_posts/2014-12-19-freshman21-structure.md
+	_posts/2014-12-19-how-to-set-the-config-file.md
+	_posts/2015-03-31-2.0version.md
+	_sass/
+	a_home.md
+	b_about.md
+	c_archives.md
+	css/
+	d_categories.md
+	e_tags.md
+	f_guestbook.md
+	feed.xml
+	images/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ git add -A
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ git commit -m 'test template'
+[master 13c46fe] test template
+ 41 files changed, 1940 insertions(+), 33 deletions(-)
+ create mode 100644 LICENSE
+ rewrite README.md (100%)
+ rewrite _config.yml (100%)
+ create mode 100644 _includes/Aboutme.html
+ create mode 100644 _includes/Archives.html
+ create mode 100644 _includes/Blogroll.html
+ create mode 100644 _includes/Categories.html
+ create mode 100644 _includes/Copyright_Notice.html
+ create mode 100644 _includes/Recent_Posts.html
+ create mode 100644 _includes/Tags.html
+ create mode 100644 _includes/comments.html
+ create mode 100644 _includes/footer.html
+ create mode 100644 _includes/head.html
+ create mode 100644 _includes/header.html
+ create mode 100644 _includes/page_pagination.html
+ create mode 100644 _includes/post_pagination.html
+ create mode 100644 _includes/sidebar.html
+ rewrite _layouts/default.html (99%)
+ create mode 100644 _layouts/page.html
+ create mode 100644 _layouts/post.html
+ create mode 100644 _posts/2013-10-10-milu.md
+ create mode 100644 _posts/2014-12-13-simple-post.md
+ create mode 100644 _posts/2014-12-18-how-to-install.md
+ create mode 100644 _posts/2014-12-19-freshman21-structure.md
+ create mode 100644 _posts/2014-12-19-how-to-set-the-config-file.md
+ create mode 100644 _posts/2015-03-31-2.0version.md
+ delete mode 100644 _posts/2015-04-16-hello-world.html
+ create mode 100644 _sass/_base.scss
+ create mode 100644 _sass/_layout.scss
+ create mode 100644 _sass/_syntax-highlighting-native.scss
+ create mode 100644 _sass/_syntax-highlighting.scss
+ create mode 100644 a_home.md
+ create mode 100644 b_about.md
+ create mode 100644 c_archives.md
+ create mode 100755 css/main.scss
+ create mode 100644 d_categories.md
+ create mode 100644 e_tags.md
+ create mode 100644 f_guestbook.md
+ create mode 100644 feed.xml
+ create mode 100644 images/favicon.ico
+ rewrite index.html (100%)
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ git remote -v
+origin	https://github.com/grokcoder/grokcoder.github.io.git (fetch)
+origin	https://github.com/grokcoder/grokcoder.github.io.git (push)
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ git push https://github.com/grokcoder/grokcoder.github.io.git
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Counting objects: 48, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (45/45), done.
+Writing objects: 100% (48/48), 22.39 KiB | 0 bytes/s, done.
+Total 48 (delta 2), reused 0 (delta 0)
+To https://github.com/grokcoder/grokcoder.github.io.git
+   5fafd51..13c46fe  master -> master
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ ls
+LICENSE         _includes       _sass           c_archives.md   e_tags.md       images
+README.md       _layouts        a_home.md       css             f_guestbook.md  index.html
+_config.yml     _posts          b_about.md      d_categories.md feed.xml
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ vi index.html 
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ sass
+^CInterrupt:                                                
+  Use --trace for backtrace.
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ sass -v
+Sass 3.4.13 (Selective Steve)
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ ls
+LICENSE         _includes       _sass           c_archives.md   e_tags.md       images
+README.md       _layouts        a_home.md       css             f_guestbook.md  index.html
+_config.yml     _posts          b_about.md      d_categories.md feed.xml
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ ls
+LICENSE         _includes       _sass           c_archives.md   e_tags.md       images
+README.md       _layouts        a_home.md       css             f_guestbook.md  index.html
+_config.yml     _posts          b_about.md      d_categories.md feed.xml
+wangxiaoyideMacBook-Pro:grokcoder.github.io wangxiaoyi$ cd ~
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ ls
+Desktop   Documents Downloads Library   Movies    Music     Pictures  Public    codes     data      ~
+wangxiaoyideMacBook-Pro:~ wangxiaoyi$ cd Desktop/
+wangxiaoyideMacBook-Pro:Desktop wangxiaoyi$ ls
+Cracking the coding interview 5th.pdf              blog
+HBase createTable 的服务器端实现分析 .pdf          createTable 的服务器端实现分析 .html
+Programming Scala.pdf                              createTable 的服务器端实现分析 .md
+wangxiaoyideMacBook-Pro:Desktop wangxiaoyi$ cp createTable\ 的服务器端实现分析\ .html ~/codes/
+wangxiaoyideMacBook-Pro:Desktop wangxiaoyi$ cd co
+-bash: cd: co: No such file or directory
+wangxiaoyideMacBook-Pro:Desktop wangxiaoyi$ cd ~/codes/
+wangxiaoyideMacBook-Pro:codes wangxiaoyi$ ls
+crawler                                       grokcoder.github.io
+crawler4j                                     hbase-1.0.0
+createTable 的服务器端实现分析 .html          learningjava
+freshman21                                    leetcode
+wangxiaoyideMacBook-Pro:codes wangxiaoyi$ vi createTable\ 的服务器端实现分析\ .html 
+
+<!DOCTYPE html><html>
+
+<head>
+<meta charset="utf-8">
+<title>createTable 的服务器端实现分析 </title>
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+"createTable 的服务器端实现分析 .html" 664L, 26424C
 ---
 layout: default
 ---
