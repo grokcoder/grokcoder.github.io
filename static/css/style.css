@@ -154,6 +154,8 @@ header {
   height: 200px;
 }
 
+
+
 #logo { 
   width: 1000px;
   height: 180px;
@@ -555,3 +557,14 @@ ul#nav li a:hover,ul#nav li a:focus {
 .intro {
     font: normal 180% 'Jenna Sue', arial, sans-serif;
 }
+
+.post-header {
+  background: none;
+}
+
+.post{
+  width: 720px;
+
+}
+
+
