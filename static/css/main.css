@@ -1,21 +1,21 @@
 /*
-Error: Invalid CSS after "...ial, sans-serif": expected "{", was ";"
-        on line 8 of main.scss
+Error: Invalid CSS after "...nt-size:   16px": expected "{", was ";"
+        on line 9 of main.scss
 
-3: ---
 4: 
 5: 
 6: 
 7: // Our variables
-8: $base-font-family: Helvetica, Arial, sans-serif;
+8: //$base-font-family: Helvetica, Arial, sans-serif;
 9: $base-font-size:   16px;
 10: $small-font-size:  $base-font-size * 0.875;
 11: $base-line-height: 1.5;
 12: 
 13: $spacing-unit:     30px;
+14: 
 
 Backtrace:
-main.scss:8
+main.scss:9
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:1165:in `expected'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:1101:in `expected'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:1096:in `tok!'
@@ -44,4 +44,4 @@ main.scss:8
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"...ial, sans-serif\": expected \"{\", was \";\"\A         on line 8 of main.scss\A \A 3: ---\A 4: \A 5: \A 6: \A 7: // Our variables\A 8: $base-font-family: Helvetica, Arial, sans-serif;\A 9: $base-font-size:   16px;\A 10: $small-font-size:  $base-font-size * 0.875;\A 11: $base-line-height: 1.5;\A 12: \A 13: $spacing-unit:     30px;"; }
+  content: "Error: Invalid CSS after \"...nt-size:   16px\": expected \"{\", was \";\"\A         on line 9 of main.scss\A \A 4: \A 5: \A 6: \A 7: // Our variables\A 8: //$base-font-family: Helvetica, Arial, sans-serif;\A 9: $base-font-size:   16px;\A 10: $small-font-size:  $base-font-size * 0.875;\A 11: $base-line-height: 1.5;\A 12: \A 13: $spacing-unit:     30px;\A 14: "; }
