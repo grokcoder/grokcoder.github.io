@@ -1,6 +1,7 @@
 # Site settings
 
 baseurl: "http://grokcoder.github.io/" # the subpath of your site, e.g. /blog/
+#测试的时候可以设置 baseurl = ""
 url: "http://grokcoder.github.io/" # the base hostname & protocol for your site
 
 
