@@ -564,7 +564,10 @@ ul#nav li a:hover,ul#nav li a:focus {
 
 .post{
   width: 720px;
+}
 
+.post-list{
+    width: 720px;
 }
 
 

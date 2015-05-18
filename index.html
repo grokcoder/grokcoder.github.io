@@ -4,20 +4,30 @@ layout: default
 
 <div class="home">
 
-    <p>
-    <p>
 
     <ul class="post-list">
         {% for post in site.posts %}
-        <li>
-            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-            <h2>
-                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </h2>
-        </li>
+
+        <h2>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <span class="post-meta">Posted by {{ post.author }} categories:  {{ post.categories }}</span>
+
+        <br/>
+        <br/>
+        {{ post.excerpt }}
+
+        <div id ="readmore"><a href="{{ post.url | prepend: site.baseurl }}">继续阅读>></a></div>
+
+
+
         {% endfor %}
     </ul>
+
+
 
 </div>
 

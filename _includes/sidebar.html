@@ -23,16 +23,15 @@
 
         <div id="classification">
             <h2 style="font-size:18px; color: #333333">Classification</h2>
-            <ul>
+
+                {% for category in site.categories %}
                 <li>
-                    <a href="#" target="_blank">sb1</a>
+                    <a href= " {{ category | first }} " > {{ category | first }} {{ category | last | size }}</a>
                 </li>
-                <li>
-                    <a href="#" target="_blank">sb1</a>
-                </li>
-                <li>
-                    <a href="#" target="_blank">sb1</a>
-                </li>
+                {% endfor %}
+
+
+
             </ul>
         </div>
     </div>
