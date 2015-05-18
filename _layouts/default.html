@@ -4,17 +4,57 @@
   {% include head.html %}
 
   <body>
+  <div id="main">
 
     {% include header.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
+    <div id="site_content">
+
+    {% include sidebar.html %}
+
+
+      <div class="page-content">
+        <div class="wrapper">
+          {{ content }}
+        </div>
       </div>
+
+
+
+
+
+
+    </div>
+
+
+    <div id="scroll">
+      <a title="Scroll to the top" class="top" href="#"><img src="static/images/top.png" alt="top" /></a>
     </div>
 
     {% include footer.html %}
 
+
+
+    <!-- javascript at the bottom for fast page loading -->
+    <script type="text/javascript" src="static/js/jquery.js"></script>
+    <script type="text/javascript" src="static/js/jquery.easing-sooper.js"></script>
+    <script type="text/javascript" src="static/js/jquery.sooperfish.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('ul.sf-menu').sooperfish();
+        $('.top').click(function() {$('html, body').animate({scrollTop:0}, 'fast'); return false;});
+      });
+    </script>
+
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+
+    </div>
   </body>
 
 </html>
