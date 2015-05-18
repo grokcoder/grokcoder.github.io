@@ -1,16 +1,8 @@
 # Site settings
-title: Keep Tracking of Learning Journey
-email: isswang@126.com
-description: > # this means to ignore newlines until "baseurl:" 
-  This is my own technology habitate, for documenting all valuable things I meet in my
-  daily life  
 
-
-
-baseurl: "/" # the subpath of your site, e.g. /blog/
+baseurl: "http://grokcoder.github.io/" # the subpath of your site, e.g. /blog/
 url: "http://grokcoder.github.io/" # the base hostname & protocol for your site
-twitter_username: Oliver
-github_username:  grokcoder
+
 
 # Build settings
 markdown: kramdown
