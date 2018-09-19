@@ -1,50 +1,11 @@
 <!DOCTYPE html>
 <html>
-
   {% include head.html %}
-
-
   <body>
-  <div id="main">
-
-    {% include header.html %}
-
-    <div id="site_content">
-
-    {% include sidebar.html %}
-
-
-      <div class="page-content">
-        <div class="wrapper">
-          {{ content }}
-        </div>
-      </div>
-
-
-
+    {% include navbar.html %}
+    <div class="content">
+      {{ content }}
     </div>
-
-
-    <div id="scroll">
-      <a title="Scroll to the top" class="top" href="#"><img src="/static/images/top.png" alt="top" /></a>
-    </div>
-
     {% include footer.html %}
-
-
-
-
-
-
-
-    </div>
   </body>
-
-  <!-- 新 Bootstrap 核心 CSS 文件 -->
-  <link rel="stylesheet" href="/static/css/bootstrap.min.css">
-
-  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-  <script src="/static/js/bootstrap.min.js"></script>
-
-
 </html>
