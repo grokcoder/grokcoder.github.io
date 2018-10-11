@@ -12,6 +12,7 @@ theme_settings:
   avatar: assets/bitking.png
   favicon: assets/bitking.png
   gravatar: cfd71941936194d6f0f1fd9c23d5c7db # Email MD5 hash
+  katex: true # Enable if using math markup
 
   # Header and footer text
   header_text: > #two or three lines to describe your site
@@ -62,7 +63,6 @@ theme_settings:
   # Scripts / Features 
   google_analytics: # Tracking ID, e.g. "UA-000000-01"
   disqus_shortname: "bitking"
-  katex: true # Enable if using math markup
   
   special_page:
     search: 
