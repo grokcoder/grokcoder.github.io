@@ -29,11 +29,11 @@ Algorand目前仅支持数字货币交易，每个交易包含了转出方的签
 Algorand按照轮次（**rounds**）的概念产生区块，每个round产生一个区块，Algorand通过BA* 算法保障整个网络在每个round产生的区块一致。
 
 如下图所示交易以及其他信息在Algorand网络中通过**gossip**协议进行传播。
-![fig1](http://pfa69k2do.bkt.clouddn.com/fig1.png)
+![fig1](http://cdn.bitking.wang/fig1.png)
 
 如下图所示，Alogrand算法通过加密抽签算法选举节点子集运行BA* 算法决定哪些pending transactions组成新的区块append到区块链上。BA*算法的每个step都会按照下图的方式进行，收钱进行抽签然后进行决策投票，最后通过gossip方式将本轮的决策广播出去。
 
-![fig2](http://pfa69k2do.bkt.clouddn.com/fig2.png)
+![fig2](http://cdn.bitking.wang/fig2.png)
 
 ### Block提议
 
@@ -66,7 +66,7 @@ Algorand的核心算法包括两个：1.密码学抽签算法，该算法用于�
 #### 算法流程
 如下图Algorithm 1所示为抽签算法的流程伪代码，抽签函数的输入为：sk: 用户私钥，seed: 伪随机种子，t: 期望被选为该role的用户的数量，role: 角色，w: 用户权重，W: 总权重
 
-![algo1](http://pfa69k2do.bkt.clouddn.com/algo1.png)
+![algo1](http://cdn.bitking.wang/algo1.png)
 
 1. 算法首先使用VRFs函数进行计算 $$
    <hash, \pi> := VRF_{sk}(seed||role) 
@@ -78,7 +78,7 @@ Algorand的核心算法包括两个：1.密码学抽签算法，该算法用于�
 5. 如果$$hash/2^{hashlen}$$ 落在区间$$I^j$$ 上，那么该用户共有j个sub-users被选中，该数字j能够通过 $$\pi$$ 被其他用户验证, j >0 就证明本节点在本轮次中被选中为共识委员会成员。
 
 如Algorithm 2算法所示为其他用户验证的逻辑，该逻辑类似抽签算法，通过用户公钥以及hash, $$\pi$$，seed等可进行正确性验证。
-![algo2](http://pfa69k2do.bkt.clouddn.com/algo2.png)
+![algo2](http://cdn.bitking.wang/algo2.png)
 
 #### 伪随机种子选取
 
@@ -102,13 +102,13 @@ Algorithm 1中提到，抽签算法的输入中有一个期望角色数量t的�
 
 如Algorithm 3所示是BA* 算法的概要描述，用户在观察区块提议时间结束之后会将其观察的区块传入BA* 算法并开始执行BA*过程：
 
-![algo3](http://pfa69k2do.bkt.clouddn.com/algo3.png)
+![algo3](http://cdn.bitking.wang/algo3.png)
 
 1. `Reduction`: 全网将对所有共识成员观察到的区块进行共识的问题转换成对某个区块或者空块进行共识问题, 这里分为两个步骤（如Algorithm 7）：
     * 1.1 `CommiteeVote` 如算法4描述该算法授权检查自己是否为共识成员，如果是则将自己观察到的区块hash广播到网络中去
     * 1.2 等待$$\lambda_{BLOCK} + \lambda_{STEP}$$的时间，收集大部分用户投票的区块 T*t
     * 1.3 如果步骤1.2超时则提议投票给空块，否则将1.2中获得的区块提交出去 （为啥还需要后续过程，因为本过程只能够保证当前节点已经知晓网络中大多数同意的区块，类似PBFT算法中的Prepare阶段之后还需Commit）
-![algo7](http://pfa69k2do.bkt.clouddn.com/algo7.png)
+![algo7](http://cdn.bitking.wang/algo7.png)
 
 2. `BinaryBA*`:
    BinaryBA* 算法将会在一个最大步数限制的情况下进行多次投票，在网络状况良好的情况下函数会在step=1的时候停止。
@@ -118,22 +118,22 @@ Algorithm 1中提到，抽签算法的输入中有一个期望角色数量t的�
     * 2.3 本次如果超时将, 那么会运行CommonCoin函数该函数将给足网络时间去同步投票信息。同时该函数会随机让系统用户选择下一轮投空还是投blockhash从而让攻击者只有1/2的命中率。
 
 3. `CountVotes`: 对标记为FINAL的区块进行计数，取得足够数量的FINAL标记将被持久化到区块链中。
-![algo8](http://pfa69k2do.bkt.clouddn.com/algo8.png)
+![algo8](http://cdn.bitking.wang/algo8.png)
 
 
 下面几个函数为BA*的辅助函数：
 
 * 投票函数，1.检查自己是否共识成员，2.是的情况下投出自己支持的区块
-![algo4](http://pfa69k2do.bkt.clouddn.com/algo4.png)
+![algo4](http://cdn.bitking.wang/algo4.png)
 
 * 统计票数函数：一定时间内将或得超过阈值票数的区块选出
-![algo5](http://pfa69k2do.bkt.clouddn.com/algo5.png)
+![algo5](http://cdn.bitking.wang/algo5.png)
 
 * 消息处理函数：接收外部投票消息，验证其共识成员身份并返回相应投票数
-![algo6](http://pfa69k2do.bkt.clouddn.com/algo6.png)
+![algo6](http://cdn.bitking.wang/algo6.png)
 
 * CommonCoin 
-![alg09](http://pfa69k2do.bkt.clouddn.com/alg09.png)
+![alg09](http://cdn.bitking.wang/alg09.png)
 
 
 ## 总结

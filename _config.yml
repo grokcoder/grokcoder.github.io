@@ -8,7 +8,7 @@ description: "关于技术与生活的思考：区块链、分布式、大数据
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
   # Meta
-  title: 一个小比特 # blog's title
+  title: BitLife # blog's title
   avatar: assets/bitking.png
   favicon: assets/bitking.png
   gravatar: cfd71941936194d6f0f1fd9c23d5c7db # Email MD5 hash
@@ -16,8 +16,8 @@ theme_settings:
 
   # Header and footer text
   header_text: > #two or three lines to describe your site
-     <p> 关于技术与人生的思索 </p>
-  header_text_feature_image: assets/img/pexels/moon1.jpg
+     <p> Tech and Life </p>
+  header_text_feature_image: assets/img/pexels/triangular.jpeg
   footer_text: >
    Copyright 2018 Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
 
@@ -34,7 +34,7 @@ theme_settings:
   google_plus:
   instagram:
   keybase:
-  linkedin:  # Full URL
+  linkedin:  https://www.linkedin.com/in/xiaoyi-wang-a0525890/
   pinterest:
   reddit:
   soundcloud:
